@@ -49,6 +49,30 @@
 <h3>Can I use a keyboard?</h3>
 <p>On Mac and iPad with a hardware keyboard, the number row and letter keys trigger pads. Each pad can be given its own key in its settings.</p>
 
+<h2>Using Blurt on a call</h2>
+
+<h3>Can people on Zoom, Discord or Teams hear my sounds?</h3>
+<p>Yes, with one piece of setup. macOS does not route one app's audio into another app's microphone, so a soundboard is not heard by default — and if you are on speakers, the echo cancellation in those apps is specifically designed to remove it.</p>
+<p>There are two ways round it.</p>
+
+<h3>The easy way: share your computer's sound</h3>
+<p>Zoom, Teams and Google Meet can all send your Mac's audio during a screen share — Zoom calls it <strong>Share Sound</strong>, Teams calls it <strong>Include computer sound</strong>. Tick it and Blurt is heard, with nothing to install. The catch is that you have to be sharing your screen.</p>
+
+<h3>The proper way: a virtual audio device</h3>
+<p>To be heard as your microphone, at any time, you need a virtual device that Blurt plays into and your call app listens to. <a href="https://existential.audio/blackhole/">BlackHole</a> is free and the usual choice; Loopback is paid and easier to configure.</p>
+<ol>
+  <li>Install BlackHole.</li>
+  <li>In Blurt: <strong>Settings → Output → Play through</strong>, choose <strong>BlackHole</strong>. Only Blurt moves — the rest of your Mac keeps using your normal speakers.</li>
+  <li>In Zoom, Discord or Teams, set the <strong>microphone</strong> to BlackHole.</li>
+</ol>
+<p>That "only Blurt moves" part is the whole point of the setting. Without it you would have to switch your entire Mac to BlackHole and would not be able to hear anything.</p>
+
+<h3>Now they can hear the board but not my voice</h3>
+<p>Expected — your call app is listening to BlackHole, and your actual microphone is not going into it. To send both, open <strong>Audio MIDI Setup</strong> (in Applications → Utilities) and create an <strong>Aggregate Device</strong> containing both BlackHole and your microphone, then select that as the microphone in your call app.</p>
+
+<h3>I cannot hear my own sounds any more</h3>
+<p>Also expected, for the same reason — Blurt is playing into BlackHole, which is not connected to your ears. In <strong>Audio MIDI Setup</strong>, create a <strong>Multi-Output Device</strong> containing BlackHole <em>and</em> your headphones, then choose that in Blurt instead of BlackHole itself.</p>
+
 <h2>Effects</h2>
 
 <h3>Where are they?</h3>
