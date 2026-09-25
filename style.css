@@ -99,3 +99,27 @@ footer a { color: var(--muted); }
   display: block;
   margin: 32px 0;
 }
+
+/* App Store button. The one thing on the page anyone came here to press. */
+.get {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin: 28px 0 0;
+}
+
+.download {
+  display: inline-block;
+  background: var(--accent);
+  color: #0b0b0d;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.download:hover { filter: brightness(1.08); }
+
+.get .note { color: var(--muted); font-size: 15px; margin: 0; }
