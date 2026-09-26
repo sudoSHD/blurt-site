@@ -123,3 +123,14 @@ footer a { color: var(--muted); }
 .download:hover { filter: brightness(1.08); }
 
 .get .note { color: var(--muted); font-size: 15px; margin: 0; }
+
+/* Screenshot strip on the home page. One column: these are wide cards
+   already, and side by side they would be too small to read. */
+.gallery { display: grid; gap: 16px; margin: 32px 0; }
+
+.gallery img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+}
